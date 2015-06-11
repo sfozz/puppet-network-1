@@ -65,7 +65,8 @@ define network::if::static (
   $dns1 = undef,
   $dns2 = undef,
   $domain = undef,
-  $linkdelay = undef
+  $linkdelay = undef,
+  $ipv6sec = undef,
 ) {
   # Validate our data
   if ! is_ip_address($ipaddress) { fail("${ipaddress} is not an IP address.") }
@@ -107,5 +108,6 @@ define network::if::static (
     dns2         => $dns2,
     domain       => $domain,
     linkdelay    => $linkdelay,
+    ipv6sec      => $ipv6sec,
   }
 } # define network::if::static
