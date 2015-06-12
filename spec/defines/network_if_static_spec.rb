@@ -90,7 +90,7 @@ describe 'network::if::static', :type => 'define' do
       :ipv6peerdns  => true,
       :ipv6address  => '123:4567:89ab:cdef:123:4567:89ab:cdef/64',
       :ipv6gateway  => '123:4567:89ab:cdef:123:4567:89ab:1',
-      :ipv6sec      => '123:4567:89ab:cdef:123:4567:89ab:cdf0/64 123:4567:89ab:cdef:123:4567:89ab:cdf1/64'
+      :ipv6sec      => '123:4567:89ab:cdef:123:4567:89ab:cdf0/64 123:4567:89ab:cdef:123:4567:89ab:cdf1/64',
       :linkdelay    => '5',
     }
     end
