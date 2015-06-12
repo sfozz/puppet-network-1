@@ -66,6 +66,9 @@ class network {
 #   $dns2          - optional
 #   $domain        - optional
 #   $bridge        - optional
+#   $linkdelay     - optional
+#   $ipv6sec       - optional
+#   $aliases       - optional
 #
 # === Actions:
 #
@@ -117,6 +120,7 @@ define network_if_base (
   $bridge = undef,
   $linkdelay = undef,
   $ipv6sec = undef,
+  $aliases = [],
 ) {
   # Validate our booleans
   validate_bool($userctl)

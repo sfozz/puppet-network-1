@@ -53,3 +53,13 @@ IPV6INIT=yes
 <% if @linkdelay %>LINKDELAY=<%= @linkdelay %>
 <% end -%>
 NM_CONTROLLED=no
+<% if !@aliases.empty? -%>
+#<%= @aliases %>
+<% num = 1 -%>
+<%   @aliases.each do |a| -%>
+<%     a.sort_by {|param,value| param}.each do |param,value| -%>
+<%= param.upcase %><%= num %>=<%= value %>
+<%     end -%>
+<% num += 1 -%>
+<%   end -%>
+<% end -%>

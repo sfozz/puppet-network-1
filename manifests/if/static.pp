@@ -21,6 +21,9 @@
 #   $dns1         - optional
 #   $dns2         - optional
 #   $domain       - optional
+#   $linkdelay    - optional
+#   $ipv6sec      - optional
+#   $aliases      - optional
 #
 # === Actions:
 #
@@ -67,6 +70,7 @@ define network::if::static (
   $domain = undef,
   $linkdelay = undef,
   $ipv6sec = undef,
+  $aliases = [],
 ) {
   # Validate our data
   if ! is_ip_address($ipaddress) { fail("${ipaddress} is not an IP address.") }
@@ -109,5 +113,6 @@ define network::if::static (
     domain       => $domain,
     linkdelay    => $linkdelay,
     ipv6sec      => $ipv6sec,
+    aliases      => $aliases,
   }
 } # define network::if::static
