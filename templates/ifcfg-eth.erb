@@ -54,7 +54,6 @@ IPV6INIT=yes
 <% end -%>
 NM_CONTROLLED=no
 <% if !@aliases.empty? -%>
-#<%= @aliases %>
 <% num = 1 -%>
 <%   @aliases.each do |a| -%>
 <%     a.sort_by {|param,value| param}.each do |param,value| -%>
